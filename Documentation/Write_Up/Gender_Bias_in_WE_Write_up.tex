@@ -1,0 +1,136 @@
+\documentclass[12pt, a4paper]{article}
+
+
+\usepackage[margin=0.9in]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{cvgreen}{RGB}{95,187,67}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	citecolor=cvgreen,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=blue
+}
+
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily,
+	columns=fullflexible,
+	language=C,
+	numbers=none,
+	stepnumber=1,
+	frame=none,
+	breaklines=true,
+	showstringspaces=false,
+	postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green},
+	commentstyle=\itshape\color{red},
+	identifierstyle=\color{blue},
+	stringstyle=\color{black},
+}
+\newcommand{\foo}{\hspace{-3pt}$\bullet$ \hspace{5pt}}
+%opening
+\title{\Large{Project Write-up -- Gender Bias in Word Embeddings}}
+\author{Ankit Pant -- 2018201035 \\ Tarun Mohandas -- 2018201008 \\
+	Supervised by: Dr. Manish Shrivastava}
+\date{}
+
+\begin{document}
+	\maketitle
+	\thispagestyle{empty}
+	\noindent\rule{\textwidth}{1pt}
+	\newpage
+	\pagenumbering{roman}
+	\setcounter{page}{1}
+	\begin{abstract}
+		Word embeddings are a type of word representation that allows words with similar meaning to have a similar representation. The blind application of machine learning on Web embeddings runs the risk of amplifying biases present in data. Word embeddings trained on a standard Natural Processing dataset, Google News Articles, exhibit female/male gender stereotypes to a disturbing extent.This raises concerns because their widespread use, often tends to amplify these biases.
+		\par The project aims to explore gender bias present in word embeddings and the techniques used to reduce/eliminate this. An attempt to explore other kinds of bias as well as other de-biasing would also be made.
+	\end{abstract}
+	\newpage
+	
+	\tableofcontents
+	\newpage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	\section{Introduction to Word Embeddings}
+		Word embedding is one of the most popular representation of document vocabulary. It is capable of capturing context of a word in a document, semantic and syntactic similarity, relation with other words, etc. They are vector representations of a particular word. \emph{Word2Vec} is one of the most popular technique to learn word embeddings using shallow neural network. 
+		\par
+		\emph{Word2Vec} can utilize either of two model architectures to produce a distributed representation of words: continuous bag-of-words (CBOW) or continuous skip-gram. In the continuous bag-of-words architecture, the model predicts the current word from a window of surrounding context words. The order of context words does not influence prediction. In the continuous skip-gram architecture, the model uses the current word to predict the surrounding window of context words. The skip-gram architecture weighs nearby context words more heavily than more distant context words.
+	
+	\section{Introduction to Bias}
+		It is important to quantify and understand bias in languages as such biases can reinforce the psychological status of different groups \cite{4}. Biases differ across people though commonalities can be detected. A number of online systems have been shown to exhibit various biases, such as racial discrimination and gender bias in the ads presented to users. Different demographic and geographic groups also use different dialects and word-choices in social media. An implication of this effect is that language used by minority group might not be able to be processed by natural language tools that are trained on ``standard” data-sets.
+		
+		\subsection{Gender Bias}
+			Gender bias in language has been studied over a number of decades in a variety of contexts. Common biases link female terms with liberal arts and family and male terms with science and careers \cite{3}. While there are more words referring to males, there are many more words that discriminates females than males. The following are some of common gender biases found in the standard datasets:
+			\begin{enumerate}
+				\item Man is to computer programmer as woman is to homemaker
+				\item Man is to doctor as woman is to nurse
+			\end{enumerate}
+			
+			Although the aforementioned examples prominently show gender bias, the following associations does not show any malignant bias and need not be modified.
+			
+			\begin{enumerate}
+				\item Man is to king as woman is to queen
+				\item Man is to actor as woman is to actress
+			\end{enumerate}
+			
+			Since the aforementioned examples have gender specific modifications to the words, they do not show unhealthy bias towards any gender.
+			
+		\subsection{Other types of Biases}
+			Some other kinds of biases\cite{2} that are encountered in Machine Learning include:
+			\subsubsection{Historical Bias}
+				According to \emph{Suresh et. al. (2009)}, ``Historical bias is a fundamental, structural issue with the first step of data generation process and can exist even given perfect sampling and feature selection."
+			\subsubsection{Statistical Bias}
+				Difference between statistic's expected value and true value.
+			\subsubsection{Unjust Bias}
+				Disproportionate preference for or prejudice against a group.
+			\subsubsection{Evaluation Bias}
+				Biases in Benchmark Datasets (which spur on research).		
+	
+	\section{Techniques for De-biasing}
+		Generally the first step towards de-biasing the embeddings is to identify a subspace \emph{called gender subspace} of the embedding that captures the bias\cite{1}. After identifying the subspace, some of the techniques used for de-biasing include:
+		\begin{itemize}
+			\item \textbf{Neutralize and Equalize:} This is also called Hard de-biasing. \emph{Neutralize} ensures that no gender-neutral words are present in the gender subspace and \emph{Equalize} equalises the set of words outside the subspace \cite{1}.
+			\item \textbf{Soft Bias Correction:} It is a linear transformation that seeks to preserve the pairwise inner products between all the word vectors while minimizing the projection of the gender neutral words onto the gender subspace \cite{1}.
+		\end{itemize}
+		
+	
+	\section{Goals of the project}
+		This project majorly aims at achieving the following goals:
+		\begin{itemize}
+			\item \textbf{Explore gender bias in word embeddings}: Explore the notion of gender bias in language(NLP datasets) and how it is captured in (associated with) word embeddings representation.
+			\item \textbf{Recognise the gender bias in the dataset}: Given a corpus/word embedding, all unhealthy gender biasing needs to be recognized.
+			\item \textbf{De-biasing the dataset}: After gender biases have been identified, they need to be de-biased, so that there is minimal bias when using the word embedding.
+		\end{itemize}
+			Once the aforementioned objectives are met, attempts would be made to do exploratory study to find other types of unhealthy biases existing in different word embeddings like \emph{Word2Vec} and \emph{ELMO}. Once this is completed, some creative and constructive solutions to de-bias other unhealthy biases found in different word embeddings like \emph{Word2Vec} and \emph{ELMO} would be explored.
+				
+	
+	\section{Timeline}
+		\renewcommand{\arraystretch}{2.3}
+		\begin{tabular}{r |@{\foo} l}
+			
+			Week 1 & Explore different word embeddings (Word2Vec, ELMO)\\
+			& Explore different pre-trained models and architecture used for training\\
+			Week 2 & Explore Similarity and Analogy problem in NLP \\
+			& Input various types of biases and check if it shows up in word embedding\\
+			Week 3+ & Analysis to check correlation between bias and data\\
+			& Trying different de-biasing methods on the different word embeddings\\
+			Bonus & Exploring other biases present in word embeddings\\
+			& Exploring solutions to de-bias the above biases\\
+		\end{tabular}
+		
+		
+	\begin{thebibliography}{2}
+		\bibitem{1} Tolga Bolukabasi, et. al., \emph{Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings}, 30th Conference on Neural Information Processing Systems (NIPS 2016), Barcelona, Spain
+		\bibitem{2} Rachel Thomas, \emph{Algorithmic Bias}, \url{https://www.youtube.com/watch?v=pThqge9QDn8&list=PLtmWHNX-gukKocXQOkQjuVxglSDYWsSh9&index=16}
+		\bibitem{3} B. A. Nosek, M. Banaji, and A. G. Greenwald. \emph{Harvesting implicit group attitudes and beliefs from a demonstration web site}. Group Dynamics: Theory, Research, and Practice, 6(1):101, 2002.
+		\bibitem{4}  E. Sapir. \emph{Selected writings of Edward Sapir in language, culture and personality}, volume 342. Univ of California Press, 1985.
+		
+		
+		
+	\end{thebibliography}
+\end{document}

@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Introduction to Word Embeddings}{1}{section.1}% 
+\contentsline {section}{\numberline {2}Introduction to Bias}{1}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Gender Bias}{1}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Other types of Biases}{1}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Historical Bias}{2}{subsubsection.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2}Statistical Bias}{2}{subsubsection.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.3}Unjust Bias}{2}{subsubsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.4}Evaluation Bias}{2}{subsubsection.2.2.4}% 
+\contentsline {section}{\numberline {3}Techniques for De-biasing}{2}{section.3}% 
+\contentsline {section}{\numberline {4}Goals of the project}{2}{section.4}% 
+\contentsline {section}{\numberline {5}Timeline}{3}{section.5}% 
