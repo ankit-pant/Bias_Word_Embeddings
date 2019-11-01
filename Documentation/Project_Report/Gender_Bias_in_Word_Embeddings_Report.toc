@@ -1,0 +1,18 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}% 
+\contentsline {section}{\numberline {2}Literature Review}{1}{section.2}% 
+\contentsline {section}{\numberline {3}Methodology}{1}{section.3}% 
+\contentsline {section}{\numberline {4}Experimentation}{1}{section.4}% 
+\contentsline {section}{\numberline {5}Results}{1}{section.5}% 
+\contentsline {section}{\numberline {6}Conclusion}{1}{section.6}% 
+\contentsline {section}{\numberline {7}Future Scope}{1}{section.7}% 
+\contentsline {section}{\numberline {8}Introduction to Word Embeddings}{1}{section.8}% 
+\contentsline {section}{\numberline {9}Introduction to Bias}{1}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Gender Bias}{1}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}Other types of Biases}{2}{subsection.9.2}% 
+\contentsline {subsubsection}{\numberline {9.2.1}Historical Bias}{2}{subsubsection.9.2.1}% 
+\contentsline {subsubsection}{\numberline {9.2.2}Statistical Bias}{2}{subsubsection.9.2.2}% 
+\contentsline {subsubsection}{\numberline {9.2.3}Unjust Bias}{2}{subsubsection.9.2.3}% 
+\contentsline {subsubsection}{\numberline {9.2.4}Evaluation Bias}{2}{subsubsection.9.2.4}% 
+\contentsline {section}{\numberline {10}Techniques for De-biasing}{2}{section.10}% 
+\contentsline {section}{\numberline {11}Goals of the project}{3}{section.11}% 
+\contentsline {section}{\numberline {12}Timeline}{3}{section.12}% 
