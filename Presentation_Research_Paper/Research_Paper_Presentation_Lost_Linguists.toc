@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Gender Bias in Word Embeddings}{5}{0}{2}
+\beamer@sectionintoc {3}{Experimental Setup}{9}{0}{3}
+\beamer@sectionintoc {4}{Experiments and Results}{11}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{17}{0}{5}
+\beamer@sectionintoc {6}{References}{20}{0}{6}
